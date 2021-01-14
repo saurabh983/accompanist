@@ -85,18 +85,20 @@ dependencies {
     // Test dependencies
     // ======================
 
-    androidTestImplementation project(':imageloading-testutils')
+    testImplementation project(':imageloading-testutils')
 
-    androidTestImplementation Libs.junit
-    androidTestImplementation Libs.truth
+    testImplementation "org.robolectric:robolectric:4.5-alpha-3"
 
-    androidTestImplementation Libs.Coroutines.test
+    testImplementation Libs.junit
+    testImplementation Libs.truth
 
-    androidTestImplementation Libs.AndroidX.Compose.test
-    androidTestImplementation Libs.AndroidX.Compose.ui
-    androidTestImplementation Libs.AndroidX.Compose.material
-    androidTestImplementation Libs.AndroidX.Test.rules
-    androidTestImplementation Libs.AndroidX.Test.runner
+    testImplementation Libs.Coroutines.test
+
+    testImplementation Libs.AndroidX.Compose.test
+    testImplementation Libs.AndroidX.Compose.ui
+    testImplementation Libs.AndroidX.Compose.material
+    testImplementation Libs.AndroidX.Test.rules
+    testImplementation Libs.AndroidX.Test.runner
 }
 
 apply plugin: "com.vanniktech.maven.publish"
